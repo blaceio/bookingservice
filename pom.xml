@@ -54,6 +54,13 @@
             	<artifactId>dockerfile-maven-plugin</artifactId>
             	<configuration>
 					<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<resources>
+                    	<resource>
+                        	<targetPath>/</targetPath>
+                        	<directory>${project.build.directory}</directory>
+                        	<include>${project.build.finalName}.jar</include>
+                    	</resource>
+                	</resources>
             	</configuration>
             	<executions>
 					<execution>
