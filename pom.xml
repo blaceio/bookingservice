@@ -17,6 +17,7 @@
 	<properties>
         <java.version>1.8</java.version>
         <docker.image.prefix>blace</docker.image.prefix>
+        <start-class>com.blaCe.microservices.bookingservice.Application</start-class>
     </properties>
 
     <dependencies>
@@ -44,22 +45,15 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                  <configuration>
+        				<mainClass>${start-class}</mainClass>
+        			</configuration>
             </plugin>
         	<plugin>
             	<groupId>com.spotify</groupId>
-            	<artifactId>docker-maven-plugin</artifactId>
+            	<artifactId>dockerfile-maven-plugin</artifactId>
             	<configuration>
-					<imageName>blace/${project.artifactId}</imageName>
-					<baseImage>java:openjdk-8-jdk-alpine</baseImage>
-					<entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>
-					<resources>
-						<resource>
-						<targetPath>/</targetPath>
-						<directory>${project.build.directory}</directory>
-						<include>${project.build.finalName}.jar</include>
-						</resource>
-					</resources>
-	            	<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<repository>${docker.image.prefix}/${project.artifactId}</repository>
             	</configuration>
             	<executions>
 					<execution>
