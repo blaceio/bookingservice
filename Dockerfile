@@ -15,7 +15,7 @@ RUN ["mvn", "verify"]
 ADD src /code/src
 RUN ["mvn", "package"]
 
-RUN bash -c 'ls /code'
+RUN bash -c 'ls /code/target'
 VOLUME /tmp
 ADD target/bookingservice-1.0.0-SNAPSHOT.jar app.jar
 EXPOSE 8080
