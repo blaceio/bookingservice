@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.6.RELEASE</version>
+        <version>1.5.4.RELEASE</version>
     </parent>
 
     <groupId>com.blaCe.microservices</groupId>
@@ -54,14 +54,7 @@
             	<artifactId>dockerfile-maven-plugin</artifactId>
             	<configuration>
 					<repository>${docker.image.prefix}/${project.artifactId}</repository>
-					<resources>
-                    	<resource>
-                        	<targetPath>/</targetPath>
-                        	<directory>${project.build.directory}</directory>
-                        	<include>${project.build.finalName}.jar</include>
-                    	</resource>
-                	</resources>
-            	</configuration>
+				</configuration>
             	<executions>
 					<execution>
 						<id>default</id>
