@@ -98,15 +98,9 @@
 				<executions>
 					<execution>
 						<id>build-docker-image</id>
-						<phase>package</phase>
+						<phase>install</phase>
 						<goals>
 							<goal>build</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>push-docker-image-to-registry</id>
-						<phase>deploy</phase>
-						<goals>
 							<goal>push</goal>
 						</goals>
 					</execution>
