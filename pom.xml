@@ -98,6 +98,7 @@
 						<goals>
 							<goal>build</goal>
 							<goal>push</goal>
+							<goal>remove</goal>
 						</goals>
 					</execution>
 				</executions>
