@@ -79,9 +79,6 @@
 								<assembly>
 									<descriptor>assembly.xml</descriptor>
 								</assembly>
-								<ports>
-									<port>9000</port>
-								</ports>
 								<cmd>
 									<shell>
 										java -jar /maven/${project.artifactId}-${version.number}.jar
