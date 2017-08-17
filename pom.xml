@@ -9,7 +9,7 @@
 		<version>1.5.4.RELEASE</version>
 	</parent>
 
-	<groupId>com.blaCe.microservices</groupId>
+	<groupId>com.blace.microservices</groupId>
 	<artifactId>bookingservice</artifactId>
 	<version>${version.number}</version>
 	<packaging>jar</packaging>
@@ -64,13 +64,9 @@
 				<plugin>
 				<groupId>io.fabric8</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.15.9</version>
+				 <version>0.21.0</version>
 				<extensions>true</extensions>
 				<configuration>
-					<authConfig>
-						<username>blace</username>
-						<password>f4vvj707</password>
-					</authConfig>
 					<images>
 						<image>
 							<name>${docker.repository.name}:${version.number}</name>

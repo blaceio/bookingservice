@@ -1,8 +1,14 @@
-# image not found? login using "docker login --username=abc --password=abc https://registry.domain.de"
-version: '2'
-services:
-  versioning-continous-delivery:
-    image: blace/bookingservice:latest
-    network_mode: "host"
-    ports:
+bookingservice:
+  image: blace/bookingservice:latest
+  ports:
       - "9000:9000"
+  container_name: "bookingservice"
+  links:
+     - mongodb
+mongodb:
+  image: mongo:latest
+  volumes:
+      - "/opt/mongodb:/data/db"
+  ports:
+    - "27017:27017"
+  container_name: "mongodb"
