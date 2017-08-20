@@ -1,7 +1,8 @@
-package com.blaCe.microservices.bookingservice.http;
+package io.blace.microservices.bookingservice.http;
 
-import com.blaCe.microservices.bookingservice.mongo.StructureRepository;
-import com.blaCe.microservices.bookingservice.products.Structure;
+import io.blace.microservices.bookingservice.mongo.StructureRepository;
+import io.blace.microservices.bookingservice.products.Structure;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

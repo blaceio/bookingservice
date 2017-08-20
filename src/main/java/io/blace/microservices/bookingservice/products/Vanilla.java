@@ -1,4 +1,4 @@
-package com.blaCe.microservices.bookingservice.products;
+package io.blace.microservices.bookingservice.products;
 
 import org.joda.time.DateTime;
 
